@@ -16,7 +16,8 @@ import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from "./data/index.js";
+import OverAllStat from "./models/OverAllStat.js";
+import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat } from "./data/index.js";
 
 // CONFIG
 
@@ -47,9 +48,10 @@ mongoose.connect(process.env.MONGO_URL, {
    app.listen(PORT, () => console.log(`SERVER is running on port ${PORT}`));
 
    // only add data one time
-   // Product.insertMany(dataProduct);
-   // ProductStat.insertMany(dataProductStat);
-   //  Transaction.insertMany(dataTransaction);
-   // User.insertMany(dataUser);
+    // OverAllStat.insertMany(dataOverallStat);
+  //  Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
+  //  Transaction.insertMany(dataTransaction);
+  //  User.insertMany(dataUser);
 
  }).catch((err) => console.log(`${err} did not connect`))
